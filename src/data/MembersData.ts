@@ -1,0 +1,76 @@
+const MembersList = [
+  {
+    img: `https://www.untitledui.com/images/avatars/byron-robertson?fm=webp&q=80`,
+    name: "Doug Wood",
+    company: "GHOST",
+    description:
+      "Developed and maintained a comprehensive hotel operations management platform within a monorepo architecture, consolidating all hotel information into a unified interface for receptionists. Built full-stack Next.js application with server-side rendering, React Server Components, and NestJS backend APIs.",
+    role: "Senior Full Stack Engineer & Frontend Architecture",
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "GraphQL",
+      "TanStack Query",
+      "Mantine UI",
+      "Redis",
+      "Socket.io",
+      "Apollo Server",
+      "Storybook",
+      "Jest",
+      "Cypress",
+      "AWS",
+    ],
+  },
+  {
+    img: `https://www.untitledui.com/images/avatars/nicolas-trevino?fm=webp&q=80`, //erica-wyatt
+    name: "Eli Campos",
+    company: "GHOST",
+    description:
+      "Developed and maintained a comprehensive hotel operations management platform within a monorepo architecture, consolidating all hotel information into a unified interface for receptionists. Built full-stack Next.js application with server-side rendering, React Server Components, and NestJS backend APIs.",
+    role: "Senior Full Stack Engineer & Frontend Architecture",
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "GraphQL",
+      "TanStack Query",
+      "Mantine UI",
+      "Redis",
+      "Socket.io",
+      "Apollo Server",
+      "Storybook",
+      "Jest",
+      "Cypress",
+      "AWS",
+    ],
+  },
+  {
+    img: `https://www.untitledui.com/images/avatars/jonathan-kelly?fm=webp&q=80`,
+    name: "James Farnsworth",
+    company: "GHOST",
+    description:
+      "Developed and maintained a comprehensive hotel operations management platform within a monorepo architecture, consolidating all hotel information into a unified interface for receptionists. Built full-stack Next.js application with server-side rendering, React Server Components, and NestJS backend APIs. Implemented real-time communication using WebSocket, GraphQL resolvers with advanced caching strategies, and WCAG-compliant UI components using Storybook.",
+    role: "Senior Full Stack Engineer",
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "GraphQL",
+      "TanStack Query",
+      "Mantine UI",
+      "Redis",
+      "Socket.io",
+      "Apollo Server",
+      "Storybook",
+      "Jest",
+      "Cypress",
+      "AWS",
+    ],
+  },
+];
+
+export default MembersList;

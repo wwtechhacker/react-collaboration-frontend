@@ -1,0 +1,87 @@
+:root {
+  --hue: 223;
+  --sat: 10%;
+  --white: hsl(0, 0%, 100%);
+  --light-theme: rgb(45, 85, 172);
+  --gray50: hsl(var(--hue), var(--sat), 95%);
+  --gray100: hsl(var(--hue), var(--sat), 90%);
+  --gray200: hsl(var(--hue), var(--sat), 80%);
+  --gray300: hsl(var(--hue), var(--sat), 70%);
+  --gray400: hsl(var(--hue), var(--sat), 60%);
+  --gray500: hsl(var(--hue), var(--sat), 50%);
+  --gray600: hsl(var(--hue), var(--sat), 40%);
+  --gray700: hsl(var(--hue), var(--sat), 30%);
+  --gray750: hsl(var(--hue), var(--sat), 25%);
+  --gray800: hsl(var(--hue), var(--sat), 20%);
+  --gray900: hsl(var(--hue), var(--sat), 10%);
+  --gray950: hsl(var(--hue), var(--sat), 5%);
+  --danger100: hsl(3, 77%, 90%);
+  --danger200: hsl(3, 77%, 80%);
+  --danger500: hsl(3, 77%, 50%);
+  --danger700: hsl(3, 77%, 30%);
+  --danger800: hsl(3, 77%, 20%);
+  --warning100: hsl(33, 94%, 90%);
+  --warning200: hsl(33, 94%, 80%);
+  --warning500: hsl(33, 94%, 50%);
+  --warning600: hsl(33, 94%, 40%);
+  --warning700: hsl(33, 94%, 30%);
+  --warning800: hsl(33, 94%, 20%);
+  --success100: hsl(153, 60%, 90%);
+  --success200: hsl(153, 60%, 80%);
+  --success300: hsl(153, 60%, 70%);
+  --success500: hsl(153, 60%, 50%);
+  --success700: hsl(153, 60%, 30%);
+  --success800: hsl(153, 60%, 20%);
+  --primary200: hsl(223, 90%, 80%);
+  --primary500: hsl(223, 90%, 50%);
+  --primary600: hsl(223, 90%, 40%);
+  --trans-dur: 0.3s;
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  /* color-scheme: light dark; */
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+}
+
+#root {
+  margin: 0 auto;
+  /* padding: 2rem; */
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  background: #c1c1c1 !important;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
