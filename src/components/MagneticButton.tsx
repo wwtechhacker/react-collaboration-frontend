@@ -40,7 +40,7 @@ export default function MagneticButton() {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            Hire Me
+            Send Message
         </button>
     );
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Grid, Box, Typography, Stack, Button } from '@mui/material'
-import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined'
-import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined'
-import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined'
+import { Grid, Box, Typography, Stack, Avatar } from '@mui/material'
 import { motion } from 'framer-motion'
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined'
+import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined'
+import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 
 const MotionBox = motion(Box);
 
@@ -18,8 +18,9 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
             container
             sx={{
                 py: { xs: 6, md: 10 },
-                px: { xs: 2, sm: 4, md: 8 },
-                background: 'linear-gradient(to right, #ffffff, 50%, rgb(224,233,248))',
+                px: { xs: 1, sm: 2, md: 4 },
+                background: 'linear-gradient(to right, #ffffff, 20%, rgb(250,259,254))',
+                // background: 'rgb(250,259,254)',
             }}
             alignItems="center"
             justifyContent="center"
@@ -44,10 +45,10 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                                 borderRadius: '50px',
                                 background: 'rgb(225,235,255)',
                                 width: 'fit-content',
-                                color: 'var(--light-theme)',
+                                color: 'var(--light-theme-purple)',
                             }}
                         >
-                            <img src={`https://cdn-icons-png.flaticon.com/24/8358/8358886.png`} />
+                            <img src={'/src/assets/bluecheck.png'} />
                             <Typography fontSize={{ xs: 12, sm: 14 }} fontWeight={'bold'}>
                                 LOOKING FOR A COMMUNICATION PARTNER
                             </Typography>
@@ -58,29 +59,29 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                             <Typography
                                 sx={{
                                     fontSize: {
-                                        xs: '26px',
+                                        xs: '28px',
                                         sm: '32px',
-                                        md: '42px',
-                                        lg: '46px',
+                                        md: '38px',
+                                        lg: '42px',
                                     },
                                     fontWeight: 700,
                                     lineHeight: 1.2,
                                 }}
                             >
-                                I Build Scalable Systems.
+                                We Build Scalable Systems.
                             </Typography>
 
                             <Typography
                                 sx={{
                                     fontSize: {
-                                        xs: '26px',
+                                        xs: '28px',
                                         sm: '32px',
-                                        md: '42px',
-                                        lg: '46px',
+                                        md: '38px',
+                                        lg: '42px',
                                     },
                                     fontWeight: 700,
                                     lineHeight: 1.2,
-                                    color: 'var(--light-theme)'
+                                    color: 'var(--light-theme-purple)'
                                 }}
                             >
                                 You Handle Client Communication.
@@ -90,7 +91,7 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                         {/* DESCRIPTION */}
                         <Typography
                             sx={{
-                                color: 'text.secondary',
+                                color: 'black',
                                 fontSize: {
                                     xs: '14px',
                                     md: '16px',
@@ -98,61 +99,61 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                                 maxWidth: 500,
                             }}
                         >
-                            I'm a developer looking to partner with someone who can manage client
-                            communication while I focus on building robust, high-quality systems.
+                            We work behind the scenes to bring your ideas to lifeー<br />
+                            so you can focus on building relationships and growing your business.
                         </Typography>
 
                         {/* BUTTONS */}
-                        <Box
+                        <Grid
+                            container
                             sx={{
+                                p: '15px 20px',
                                 display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
                                 gap: 2,
-                                flexDirection: {
-                                    xs: 'column',
-                                    sm: 'row',
-                                },
+                                backgroundColor: 'rgb(245,248,245)',
+                                borderRadius: '10px',
+                                backdropFilter: 'blur(8px)',
+                                boxShadow: '0 0 10px rgba(50,100,50,0.2)',
                             }}
                         >
-                            <Button
-                                variant="contained"
-                                startIcon={<HandshakeOutlinedIcon />}
-                                fullWidth
-                                sx={{ maxWidth: { sm: 220 } }}
-                            >
-                                <Typography>Let's Collaborate</Typography>
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                startIcon={<ReceiptLongOutlinedIcon />}
-                                fullWidth
-                                sx={{ maxWidth: { sm: 220 } }}
-                            >
-                                <Typography>View My Work</Typography>
-                            </Button>
-                        </Box>
+                            <Grid size={2}>
+                                <Box component={'img'} src={'/src/assets/handshake.png'} />
+                            </Grid>
+                            <Grid size={9} sx={{ textAlign: 'center' }}>
+                                <Stack spacing={1}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <Typography>Your Focus: Client & Growth</Typography>
+                                        <Typography>Our Focus: Code & Execution</Typography>
+                                    </Box>
+                                    <Typography variant='h6' color='success'>Together: Successful Projects</Typography>
+                                </Stack>
+                            </Grid>
+                        </Grid>
 
                         {/* FEATURES */}
-                        <Box
-                            sx={{
-                                display: 'grid',
-                                gridTemplateColumns: {
-                                    xs: '1fr',
-                                    sm: '1fr 1fr',
-                                    md: '1fr 1fr 1fr',
-                                },
-                                gap: 2,
-                            }}
-                        >
+                        <Grid container>
                             {[
-                                'Production-Ready Code',
-                                'Clear Progress Updates',
-                                'Reliable Delivery',
-                            ].map((text, i) => (
-                                <Box
-                                    key={i}
+                                {
+                                    icon: <CheckCircleOutlinedIcon />,
+                                    title: '20+',
+                                    desc: 'Projects Delivered',
+                                },
+                                {
+                                    icon: <SentimentSatisfiedAltOutlinedIcon />,
+                                    title: 'Happy',
+                                    desc: 'Clients',
+                                },
+                                {
+                                    icon: <AccessTimeOutlinedIcon />,
+                                    title: 'Reliable',
+                                    desc: '& On-Time',
+                                }
+                            ].map((item, i) => (
+                                <Grid
+                                    size={4}
                                     sx={{
-                                        backgroundColor: 'rgba(0, 0, 0, 0.03)',
                                         display: 'flex',
                                         alignItems: 'center',
                                         gap: 1,
@@ -160,11 +161,26 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                                         borderRadius: '5px',
                                     }}
                                 >
-                                    <CheckCircleOutlinedIcon color="success" />
-                                    <Typography fontSize="0.8rem">{text}</Typography>
-                                </Box>
+                                    <Box
+                                        sx={{
+                                            width: 40,
+                                            height: 40,
+                                            borderRadius: '50%',
+                                            color: 'green',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                        }}
+                                    >
+                                        {item.icon}
+                                    </Box>
+                                    <Stack>
+                                        <Typography fontSize="1.2rem" fontWeight={'bold'}>{item.title}</Typography>
+                                        <Typography fontSize="1rem">{item.desc}</Typography>
+                                    </Stack>
+                                </Grid>
                             ))}
-                        </Box>
+                        </Grid>
                     </Stack>
                 </MotionBox>
             </Grid>
@@ -185,13 +201,12 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                     >
                         <Box
                             component="img"
-                            // src="/src/assets/hero-right.png"
-                            src={`https://img.freepik.com/free-photo/happy-young-colleagues-sitting-office-coworking-using-laptop_171337-17689.jpg`}
+                            src="/src/assets/hero-right.png"
                             draggable={false}
                             alt="hero"
                             sx={{
                                 width: '100%',
-                                maxWidth: { xs: 480, sm: 480, md: 360, lg: 560 },
+                                // maxWidth: { xs: 480, sm: 480, md: 600, lg: 900 },
                                 borderRadius: 10,
                             }}
                         />
@@ -199,6 +214,22 @@ const Home: React.FC<Props> = ({ HomeRef }) => {
                 </MotionBox>
             </Grid>
         </Grid>
+
+
+        // <Box
+        //     ref={HomeRef}
+        //     component={'img'}
+        //     src={'/src/assets/home.png'}
+        //     draggable={false}
+        //     onClick={(e) => e.preventDefault()}
+        //     sx={{
+        //         display: 'grid',
+        //         width: '100%',
+        //         justifySelf: 'center',
+        //         gridTemplateColumns: 'repeat(auto-fit, minmax(30%, 1fr))',
+        //         gap: 3,
+        //     }}
+        // />
     )
 }
 

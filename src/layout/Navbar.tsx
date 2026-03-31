@@ -1,11 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import ThemeSwitch from '../components/ThemeSwitch';
-import { Typography } from '@mui/material';
+import { Box, AppBar, Toolbar, Button, Typography } from '@mui/material';
+import ThemeSwitch from '../components/ThemeSwitch'
 
 const StyledToolbar = styled(Toolbar)(() => ({
     display: 'flex',
@@ -123,9 +119,19 @@ const Navbar = ({
                 <StyledToolbar>
 
                     {/* Logo */}
-                    <Box>
-                        <Typography sx={{ fontSize:'1.2em', fontWeight: 'bold', color: 'black' }}>James Farnsworth</Typography>
-                    </Box>
+                    <Typography
+                        onClick={() => handleClick(0, 'home')}
+                        sx={{
+                            fontSize: '1.3rem',
+                            fontWeight: 700,
+                            background: 'linear-gradient(90deg, #000, var(--light-theme-purple))',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            cursor: 'pointer',
+                        }}
+                    >
+                        TECH ForGe LLC
+                    </Typography>
 
                     {/* Menu Container */}
                     <Box
@@ -142,16 +148,33 @@ const Navbar = ({
                                 ref={(el) => (itemRefs.current[index] = el)}
                                 onClick={() => handleClick(index, item.id)}
                                 sx={{
-                                    color: active === item.id ? 'primary.main' : 'text.primary',
+                                    color: active === item.id ? 'var(--light-theme-purple)' : 'text.primary',
                                     fontWeight: 500,
                                     textTransform: 'none',
+                                    transition: 'all 0.3s ease',
+                                    '&::after': {
+                                        content: '""',
+                                        position: 'absolute',
+                                        left: 0,
+                                        bottom: 0,
+                                        width: '0%',
+                                        height: '2px',
+                                        backgroundColor: 'var(--light-theme-purple)',
+                                        transition: 'width 0.3s ease',
+                                    },
+
+                                    '&:hover::after': {
+                                        width: '100%',
+                                    },
+
+                                    '&:hover': {
+                                        color: 'var(--light-theme-purple)',
+                                    },
                                 }}
                             >
                                 {item.label}
                             </Button>
                         ))}
-
-                        <ThemeSwitch sx={{ ml: 1 }} defaultChecked />
 
                         {/* Sliding underline */}
                         <Box
@@ -160,12 +183,14 @@ const Navbar = ({
                                 position: 'absolute',
                                 bottom: 0,
                                 height: '2px',
-                                backgroundColor: 'primary.main',
+                                backgroundColor: 'var(--light-theme-purple)',
                                 transition: 'all 0.3s ease',
                                 borderRadius: '2px',
                             }}
                         />
                     </Box>
+
+                    <ThemeSwitch />
 
                     {/* Mobile Menu Placeholder */}
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

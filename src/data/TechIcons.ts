@@ -1,40 +1,36 @@
 const TechIcons = [
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/5968/5968350.png`,
+        icon : '/src/assets/TechIcons/python.png',
         title:'Python'
     },
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/1199/1199124.png`,
+        icon : '/src/assets/TechIcons/javascript.png',
         title:'JavaScript'
     },
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/5968/5968381.png `,
-        title:'TypeScript'
-    },
-    {
-        icon : `https://cdn-icons-png.flaticon.com/24/3379/3379166.png`,
+        icon : '/src/assets/TechIcons/reactjs.png',
         title:'React.js'
     },
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/15484/15484278.png`,
+        icon : '/src/assets/TechIcons/vuejs.png',
         title:'Vue.js'
     },
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/15484/15484402.png`,
-        title:'Angular.js'
+        icon : '/src/assets/TechIcons/angular.png',
+        title:'Angular'
     },
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/5968/5968322.png`,
+        icon : '/src/assets/TechIcons/nodejs.png',
         title:'Node.js'
     },
     {
-        icon : `https://cdn-icons-png.flaticon.com/24/5658/5658359.png`,
+        icon : '/src/assets/TechIcons/mongodb.png',
         title:'MongoDB'
     },
-    // {
-    //     icon : `https://cdn-icons-png.flaticon.com/24/10828/10828570.png`,
-    //     title:'PostreSQL'
-    // },
+    {
+        icon : '/src/assets/TechIcons/aws.png',
+        title:'AWS'
+    },
 ]
 
 export default TechIcons;

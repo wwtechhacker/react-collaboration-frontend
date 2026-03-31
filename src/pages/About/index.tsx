@@ -5,15 +5,17 @@ import {
     Avatar,
     Stack,
 } from '@mui/material'
-import CodeIcon from '@mui/icons-material/Code'
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
-import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
-import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
-import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
-import VolunteerActivismOutlinedIcon from '@mui/icons-material/VolunteerActivismOutlined';
-import { motion } from 'framer-motion';
-import TechIcons from '../../data/TechIcons';
+import {
+    ClockIcon,
+    RocketIcon,
+    CodeIcon,
+    MessageCircleMoreIcon,
+    UserStarIcon,
+    SettingsIcon,
+    HandHeartIcon
+} from 'lucide-react';
+import { motion } from 'framer-motion'
+import TechIcons from '../../data/TechIcons'
 
 const MotionBox = motion(Box);
 
@@ -29,6 +31,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                 sx={{
                     py: { xs: 2, md: 4 },
                     px: { xs: 2, sm: 4, md: 8 },
+                    backgroundColor: 'rgb(248,248,248)',
                 }}
             >
                 {/* TITLE */}
@@ -40,7 +43,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                         mb: 2,
                     }}
                 >
-                    About Me
+                    About Us
                 </Typography>
 
                 {/* MAIN CONTENT */}
@@ -53,7 +56,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                     {/* AVATAR */}
                     <Grid size={{ xs: 12, md: 3 }} textAlign="center">
                         <Avatar
-                            src={`https://img.freepik.com/premium-photo/businessman-listening-music-through-headphones-while-working_107420-93511.jpg`}
+                            src={'/src/assets/about-us.avif'}
                             sx={{
                                 width: { xs: 120, md: 160 },
                                 height: { xs: 120, md: 160 },
@@ -76,15 +79,15 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                             }}
                         >
                             <Typography sx={{ fontSize: { xs: 20, md: 24 } }}>
-                                <Box component="span" sx={{ color: 'var(--light-theme)', fontWeight: 'bold' }}>
-                                    I’m a results-driven developer
+                                <Box component="span" sx={{ color: 'var(--light-theme-purple)', fontWeight: 'bold' }}>
+                                    We’re results-driven developers
                                 </Box>{' '}
                                 <Box component="span" sx={{ color: 'black', fontWeight: 'bold' }}>
                                     focused on execution.
                                 </Box>
                             </Typography>
-                            I specialize in building clean, scalable web applications.
-                            Now, I’m ready to partner with a professional who excels at managing client interactions.
+                            We specialize in building clean, scalable web applications.
+                            Now, We’re ready to partner with a professional who excels at managing client interactions.
                         </Typography>
                     </Grid>
 
@@ -96,17 +99,17 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                                 desc: 'React, Next.js, Node.js, clean scalable systems.',
                             },
                             {
-                                icon: <RocketLaunchIcon />,
+                                icon: <RocketIcon />,
                                 title: 'Focused on Building',
                                 desc: 'Turn requirements into production-ready systems.',
                             },
                             {
-                                icon: <AccessTimeIcon />,
+                                icon: <ClockIcon />,
                                 title: 'Reliable & Consistent',
                                 desc: 'Always deliver clean, tested, maintainable code.',
                             },
                         ].map((item, i) => (
-                            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={i}>
+                            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4 }} key={i}>
                                 <MotionBox
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +120,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                                         sx={{
                                             p: 3,
                                             borderRadius: 3,
-                                            background: 'rgba(0,0,0,0.05)',
+                                            background: 'rgba(0,0,0,0.03)',
                                             backdropFilter: 'blur(10px)',
                                             height: '100%',
                                             transition: '0.3s',
@@ -132,7 +135,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                                                     width: 40,
                                                     height: 40,
                                                     borderRadius: '50%',
-                                                    background: 'var(--light-theme)',
+                                                    background: 'var(--light-theme-purple)',
                                                     color: 'white',
                                                     display: 'flex',
                                                     alignItems: 'center',
@@ -185,12 +188,11 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                 </Box>
             </Box>
 
-            {/* Who I'm Looking For */}
+            {/* Who We're Looking For */}
             <Box
                 sx={{
                     py: { xs: 2, md: 4 },
                     px: { xs: 2, sm: 4, md: 8 },
-                    background: 'rgb(246,247,251)',
                 }}
             >
                 {/* TITLE */}
@@ -202,7 +204,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                         mb: 2,
                     }}
                 >
-                    Who I'm Looking For
+                    Who We’re Looking For
                 </Typography>
 
                 <Grid size={{ xs: 12, md: 9 }}>
@@ -215,34 +217,34 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                             fontSize: { xs: 16, md: 18 },
                         }}
                     >
-                        I need a communication partner who can represent the project and handle the client relationships.
+                        We need a communication partner who can represent the project and handle the client relationships.
                     </Typography>
                 </Grid>
 
                 <Grid container spacing={3}>
                     {[
                         {
-                            icon: <QuestionAnswerOutlinedIcon />,
+                            icon: <MessageCircleMoreIcon />,
                             title: 'Strong Communicator',
                             desc: 'Comfortable talking with clients and understanding their needs.',
                         },
                         {
-                            icon: <Diversity3OutlinedIcon />,
+                            icon: <UserStarIcon />,
                             title: 'Client-Facing & Responsible',
                             desc: 'Handles meetings, clarifies requirements, and keeps clients happy.',
                         },
                         {
-                            icon: <HandymanOutlinedIcon />,
+                            icon: <SettingsIcon />,
                             title: 'Organized & Proactive',
                             desc: 'Manages updates, expectations, and project flow.',
                         },
                         {
-                            icon: <VolunteerActivismOutlinedIcon />,
+                            icon: <HandHeartIcon />,
                             title: 'A True Partner',
                             desc: 'Someone who wants to grow and build successful projects together.',
                         },
                     ].map((item, i) => (
-                        <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={i}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3, lg: 3 }} key={i}>
                             <Box
                                 sx={{
                                     p: 3,
@@ -262,7 +264,7 @@ const About: React.FC<Props> = ({ AboutRef }) => {
                                             width: 40,
                                             height: 40,
                                             borderRadius: '50%',
-                                            background: 'var(--light-theme)',
+                                            background: 'var(--light-theme-purple)',
                                             color: 'white',
                                             display: 'flex',
                                             alignItems: 'center',

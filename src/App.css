@@ -2,7 +2,8 @@
   --hue: 223;
   --sat: 10%;
   --white: hsl(0, 0%, 100%);
-  --light-theme: rgb(45, 85, 172);
+  --light-theme-blue: rgb(45, 85, 172);
+  --light-theme-purple: rgb(95,62,229);
   --gray50: hsl(var(--hue), var(--sat), 95%);
   --gray100: hsl(var(--hue), var(--sat), 90%);
   --gray200: hsl(var(--hue), var(--sat), 80%);

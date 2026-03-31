@@ -14,7 +14,7 @@ function Copyright() {
             {'© '}
             2026&nbsp;
             <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
-                James Farnsworth
+                TechForGe LLC
             </a>
             • Full Stack Developer looking for a Client Communication Partner.
         </Typography>
